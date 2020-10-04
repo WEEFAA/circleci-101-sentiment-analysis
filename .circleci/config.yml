@@ -10,8 +10,12 @@ jobs:
     executor: default-exec
     steps:
       - checkout 
-      - run: ls -al
-      - run: node -v
+      - run: 
+        name: Install packages
+        command: npm install 
+      - run: 
+        name: Run test with Jest
+        command: npm run test
 
 workflows:
   test_project:
