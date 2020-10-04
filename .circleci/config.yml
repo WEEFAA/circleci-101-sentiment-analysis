@@ -1,0 +1,18 @@
+version: 2.1
+
+executors:
+  default-exec:
+    docker:
+      - image: 'circleci/node:latest'
+
+jobs:
+  test:
+    executor: default-exec
+    steps:
+      - checkout 
+      - run: ls -al
+      - run: node -v
+
+workflows:
+  jobs:
+    - test
