@@ -5,5 +5,6 @@ module.exports.getWord = function(word) {
         return "Weef weef weef! I love munchkins and corgis"
     }
     // otherwise, return defined word
+    return false
     return word
 }
